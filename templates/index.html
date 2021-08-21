@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel='stylesheet' href="{% static 'style.css' %}">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+    <div id="page-wrap">
+        <img src="{% static 'myname/HNGlogo.png' %}" alt="image here" style="width:400px;height:60px;">
+        
+        <h1>Ake Prince Chimakpam</h1>
+        <div>
+        <h2>Profile</h2>
+        <p class="darkfont">I am a Biochemistry student in the University of Uyo, A tech enthusiast and a fast learner.<br>
+             I'm also a creative person who sets out to solve problems if given the tools needed.</p></div>
+        <h2>Education</h2>
+        <p class="darkfont">SSCE @ Obio Comprehensive College, Port Harcourt. 2017</p>
+
+        <h2>Interests and hobbies</h2>
+        <p class="darkfont">Drawing<br>
+        Reading<br>
+        Programming<br>
+        Writing<br>
+        Designing</p>
+
+        <h2>Work Experience</h2>
+        <p class="darkfont">Computer Operator @ The Big Idea, Rumuomasi, Port Harcourt. 2019</p>
+
+        <h2>Skills</h2>
+        <p class="darkfont">Graphics design<br>
+        Communication<br>
+        Team Player</p>
+
+        <h2>Contact</h2>
+        <p class="darkfont">80 Uruakpa Road, Uyo. Akwa Ibom State.<br>
+        11a Circular Road, Elekahia Housing Estate, Port Harcourt.<br>
+        08166823194, 07086932269<br>
+        awesumake@gmail.com<br>
+        contact.blueinthefactory@gmail.com.</p>
+
+
+        <h2>Wanna send something to me?</h2>
+
+        <div>
+            <form method="post" action="success">
+                {% csrf_token %}
+                <div class="changeform">
+                    {{ form.name }}
+                </div>
+                <div class="changename">
+                    {{ form.message }}
+                </div>
+
+                <input type="submit" value="Send"/>
+            </form>
+        </div>
+        </div>
+    </body>
+</html>
